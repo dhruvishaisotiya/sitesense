@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sitesense-dark: #003135;
+  --color-sitesense-secondary: #024950;
+  --color-sitesense-accent: #0FA4AF;
+  --color-sitesense-soft: #AFDDE5;
+  --color-sitesense-white: #FFFFFF;
+}
+
+@layer base {
+  :root {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color-scheme: light dark;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #003135;
+    color: #FFFFFF;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom Utilities for High-End SAAS Aesthetics */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 164, 175, 0.15);
+  box-shadow: 0 20px 40px -15px rgba(0, 49, 53, 0.12);
+}
+
+.glow-accent {
+  box-shadow: 0 0 25px rgba(15, 164, 175, 0.35);
+}
+
+.glow-accent-soft {
+  box-shadow: 0 0 15px rgba(175, 221, 229, 0.25);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #AFDDE5 50%, #0FA4AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-teal {
+  background: linear-gradient(135deg, #003135 0%, #024950 50%, #0FA4AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-btn {
+  background: linear-gradient(135deg, #0FA4AF 0%, #024950 100%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(135deg, #13b5c1 0%, #035a63 100%);
+  box-shadow: 0 10px 25px -5px rgba(15, 164, 175, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #003135;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #024950;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0FA4AF;
+}

@@ -1,0 +1,38 @@
+# ---- Python / Django ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+env/
+.env
+*.log
+
+# Local database - remove this line if you intentionally want to commit seed data
+db.sqlite3
+db.sqlite3-journal
+
+# ---- Node / frontend ----
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- AI engine artifacts ----
+# These exceed GitHub's 100 MB per-file hard limit and must not be committed.
+# model_days_remaining.pkl is 492 MB and constructiq_dataset.csv is 104 MB.
+# Re-create the models with: python train_ai_models.py
+backend/ai_engine/models/*.pkl
+backend/ai_engine/dataset/*.csv
+
+# ---- Editors / OS ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.swp
+*.suo

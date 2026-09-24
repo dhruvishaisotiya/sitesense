@@ -1,0 +1,18 @@
+Django==5.2.17
+djangorestframework==3.18.1
+djangorestframework-simplejwt==5.5.1
+django-cors-headers==4.9.0
+
+# Report exports (PDF / Excel)
+reportlab==5.0.1
+openpyxl==3.1.5
+
+# AI prediction engine
+# NOTE: the trained .pkl models were produced with scikit-learn 1.8.0. Loading
+# them under a different version prints an InconsistentVersionWarning and the
+# predictions are not guaranteed to be valid. Either keep this pin, or re-train
+# with `python train_ai_models.py`.
+scikit-learn==1.8.0
+pandas==3.0.6
+numpy==2.4.6
+joblib==1.6.0
