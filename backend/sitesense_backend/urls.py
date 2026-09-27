@@ -1,5 +1,7 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import include, path, re_path
+
+from sitesense_backend.views import FrontendAppView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,4 +15,8 @@ urlpatterns = [
     path('api/ai/', include('ai_engine.urls')),
     path('api/reports/', include('reports.urls')),
     path('api/settings/', include('system_settings.urls')),
+
+    # Everything else is a React Router route. Must stay last, and must not
+    # swallow the API, admin or static prefixes above.
+    re_path(r'^(?!api/|admin/|static/|media/).*$', FrontendAppView.as_view(), name='frontend'),
 ]
